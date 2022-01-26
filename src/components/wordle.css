@@ -1,6 +1,15 @@
 input {
-    width: 30px;
+    width: 45px;
     padding: 10px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+input.active {
+    background-color: var(--blue-light);
+    border: none;
+    color: #fff;
 }
 
 .flex-row-center {
@@ -16,7 +25,7 @@ input {
     flex-direction: column;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
 }
 
 .btn {
@@ -36,9 +45,11 @@ input {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    background-color: #eee;
+    padding-top:10px;
 }
 
-.ayutha-eluthu,
+.uyir-eluthu,
 .mei-eluthu {
     display: flex;
     justify-content: center;
@@ -53,7 +64,7 @@ input {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 8px;
+    padding: 10px;
     min-width: 35px;
     cursor: pointer;
     user-select: none;
@@ -63,14 +74,14 @@ input {
 }
 
 .btn-primary {
-    background-color: #1976D2;
+    background-color: var(--blue-light);
     border: none;
     color: #fff;
     box-shadow: rgba(70, 0, 150, 0.2) 5px 5px 5px;
 }
 
 .btn-primary:hover {
-    background-color: #0D47A1;
+    background-color: var(--blue-strong);
     color: #fff;
 }
 
@@ -95,19 +106,20 @@ input {
 }
 
 .btn-secondary {
-    border: 1px solid #eee;
+    border: 1px solid #fff;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 5px;
 }
 
 .btn-secondary:hover {
-    border: 1px solid #666;
-    background-color: #ddd;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border: 1px solid #FFFF8D;
+    background-color: #FFFF8D;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .btn-secondary:active {
-    box-shadow: 0 0 5px rgba(0,0,0,0.1) inset;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
 }
 
 .btn-danger {
@@ -134,6 +146,6 @@ input {
 
 .board-text {
     background-color: #FFFF8D;
-    width: 160px;
+    width: 210px;
     padding: 5px 10px;
 }

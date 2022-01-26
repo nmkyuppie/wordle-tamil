@@ -1,23 +1,30 @@
 import React from 'react';
-import { ayuthaEluthu, meiEluthu } from '../common/constants';
+import { useDispatch } from 'react-redux'
+import { uyirEluthu, meiEluthu } from '../common/constants';
+import { prefixClicked, suffixClicked } from '../redux/keyboardSlice';
 
 export default function Keyboard() {
+    
+  const dispatch = useDispatch()
   return (
       <div className="keyboard">
         <div className='mei-eluthu'>
             {
                 meiEluthu.map(a=>
-                    <btn className='btn-keyboard btn-secondary tamil'>{a}</btn>
+                    <button className='btn-keyboard btn-secondary tamil' onClick={() => dispatch(prefixClicked({prefix:a.letter, id:a.id}))}>{a.letter}</button>
                 )
             }
         </div>
-        <div className='ayutha-eluthu'>
+        <div className='uyir-eluthu'>
             {
-                ayuthaEluthu.map(a=>
-                    <btn className='btn-keyboard btn-secondary tamil'>{a}</btn>
+                uyirEluthu.map(a=>
+                    <button className='btn-keyboard btn-secondary tamil' onClick={() => dispatch(suffixClicked({suffix:a.letter, id:a.id}))}>{a.letter}</button>
                 )
             }
         </div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
       </div>
   );
 }
